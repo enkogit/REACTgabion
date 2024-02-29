@@ -2,7 +2,7 @@ import React from 'react';
 
 const PriceTable = () => {
     return (
-        <div className="mt-8 bg-gray-100 p-8" style={{ padding: "6rem" }}>
+        <div className="mt-8 bg-gray-100 p-8" style={{ padding: "3rem" }}>
             <section>
                 <div className="mb-8">
                     <h2 className="text-center text-3xl text-blue-900 uppercase font-bold">Pricing</h2>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import NavBar from '../components/Navbar/NavBar';
 // Remove the import for heroImg as it's no longer needed
 
@@ -15,7 +14,7 @@ const Hero = () => {
                     <div id="hero" className="flex flex-col lg:flex-row py-8 justify-between text-center lg:text-left">
                         <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
                             <h1 className="mb-5 md:text-5xl text-3xl font-bold text-blue-900">
-                                High-Quality Gabion Baskets, Panels, and Fences for Your Landscaping Needs
+                                High-Quality Gabion Baskets for Your Landscaping Needs
                             </h1>
                             <div className="text-xl font-semibold tracking-tight mb-5 text-gray-500">
                                 Gabionca offers durable and versatile gabion solutions for erosion control, retaining walls, and aesthetic landscaping.
