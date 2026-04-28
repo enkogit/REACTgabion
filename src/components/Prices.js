@@ -4,16 +4,16 @@ const PriceTable = () => {
     return (
         <div className="mt-8 bg-gray-100 p-8" style={{ padding: "3rem" }}>
             <section>
-                <div className="mb-8">
+                {/* <div className="mb-8">
                     <h2 className="text-center text-3xl text-blue-900 uppercase font-bold">Pricing</h2>
                     <div className='flex justify-center my-2'>
                         <div className='w-24 border-b-4 border-blue-900'></div>
                     </div>
                     <p className="text-center text-xl lg:text-2xl font-semibold text-blue-900">Explore our gabion basket sizes and rock fill options.</p>
-                </div>
+                </div> */}
 
                 {/* Container div with max width and margin auto for centering */}
-                <div className="max-w-2/4 mx-auto">
+                {/* <div className="max-w-2/4 mx-auto">
                     <div className="overflow-x-auto">
                         <table className="w-full leading-normal">
                             <thead>
@@ -90,7 +90,7 @@ const PriceTable = () => {
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </div> */}
             </section>
         </div>
     )
