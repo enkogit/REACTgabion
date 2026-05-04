@@ -66,7 +66,7 @@ const Hero = () => {
                                     onClick={scrollToProducts}
                                     className="border-2 border-[#1a3c34] text-[#1a3c34] hover:bg-[#1a3c34] hover:text-white font-semibold px-8 py-4 rounded-2xl text-lg transition"
                                 >
-                                    Browse Our Products
+                                    Browse Products
                                 </button>
                             </div>
 
