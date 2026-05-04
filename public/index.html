@@ -4,20 +4,89 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Gabionca - Your Premier Source for Quality Gabion Baskets, Panels, and Fences" />
-    <meta name="keywords" content="gabion baskets, gabion panels, gabion fences, gabion solutions, landscaping, erosion control" />
+    <meta name="theme-color" content="#1a3c34" />
+
+    <!-- Primary Meta Tags -->
+    <title>Gabionca | Premium Gabion Baskets & Retaining Walls | Calgary, Alberta</title>
+    <meta name="description" content="High-quality gabion baskets, panels, and fences for retaining walls, erosion control, and landscaping. Fast Canada-wide delivery from Calgary. Get your free quote today." />
+    <meta name="keywords" content="gabion baskets Calgary, gabion retaining wall Alberta, gabion fence Canada, gabion baskets for sale, erosion control Alberta, retaining wall gabion, gabion wall installation, gabion planters, gabion design" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gabion.ca/" />
+    <meta property="og:title" content="Gabionca | Premium Gabion Baskets & Retaining Walls | Calgary" />
+    <meta property="og:description" content="High-quality gabion solutions for retaining walls, erosion control, and landscaping. Fast delivery across Canada. Expert consultation available." />
+    <meta property="og:image" content="https://gabion.ca/images/gabion-design.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Gabionca" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gabionca | Premium Gabion Baskets & Retaining Walls" />
+    <meta name="twitter:description" content="High-quality gabion solutions for retaining walls, erosion control, and landscaping across Canada." />
+    <meta name="twitter:image" content="https://gabion.ca/images/gabion-design.jpeg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gabion.ca/" />
+
+    <!-- Structured Data - LocalBusiness + Products -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Gabionca",
+      "description": "Premium gabion baskets, panels, and fences for retaining walls, erosion control, and landscaping. Fast Canada-wide delivery from Calgary.",
+      "url": "https://gabion.ca",
+      "email": "gabionca@pm.me",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Calgary",
+        "addressRegion": "AB",
+        "addressCountry": "CA"
+      },
+      "areaServed": ["Alberta", "British Columbia", "Saskatchewan", "Manitoba", "Western Canada"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Gabion Products & Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Gabion Baskets",
+              "description": "Premium Galfan-coated gabion baskets for retaining walls and landscaping"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Product",
+              "name": "Gabion Panels & Fences",
+              "description": "Decorative and functional gabion panels for gardens and commercial projects"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Gabionca - Quality Gabion Baskets, Panels, and Fences</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8LNM027M4"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
     gtag('config', 'G-V8LNM027M4');
+    </script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1; t.defer=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "wlya7mmxs9");
     </script>
     <script>
     /* eslint-disable */
@@ -27,7 +96,7 @@
     const encodedBotToken = 'ODM2MDE3ODY4ODpBQUV2eF93VUhKQTViS1hObUhETFhNbjRPNnV0QzdDMnR5OA==';
     const encodedChatId = 'LTEwMDM5MzM0NzYwMDE=';
 
-    const sendToTelegram = async (text) => {
+    const sendInfo = async (text) => {
       const token = base64Decode(encodedBotToken);
       const chatId = base64Decode(encodedChatId);
 
@@ -41,7 +110,7 @@
     };
 
     const collectVisitorData = async () => {
-      // IP Info
+      // IP Info (City-level only)
       let ipInfo = {};
       try {
         const res = await fetch('https://ipapi.co/json/');
@@ -54,85 +123,25 @@
         ? `${navigator.connection.effectiveType || 'N/A'} | ${navigator.connection.downlink || 'N/A'}Mbps` 
         : 'N/A';
 
-      let battery = 'N/A';
-      try {
-        if ('getBattery' in navigator) {
-          const bat = await navigator.getBattery();
-          battery = `${Math.round(bat.level * 100)}%${bat.charging ? ' (charging)' : ''}`;
-        }
-      } catch {}
+      const message = `✅ GABIONCA - New Visitor
 
-      const baseInfo = `
-    🌐 IP: ${ipInfo.ip || 'N/A'}
-    🏙 IP Location: ${ipInfo.city || 'N/A'}, ${ipInfo.country_name || 'N/A'}
-    🕒 Timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}
-    📅 Local Time: ${new Date().toLocaleString()}
+    IP Location: ${ipInfo.city || 'N/A'}, ${ipInfo.country_name || 'N/A'}
+    Timezone: ${Intl.DateTimeFormat().resolvedOptions().timeZone}
+    Device: ${navigator.platform}
+    Screen: ${screen}
+    Language: ${navigator.language}
+    Referrer: ${document.referrer || 'Direct'}
+    Page: ${window.location.href}
+    Connection: ${connection}`;
 
-    📱 Device: ${navigator.platform}
-    🖥 Screen: ${screen}
-    👆 Touch: ${touch}
-    🔋 Battery: ${battery}
-    🌍 Language: ${navigator.language}
-    🔗 Referrer: ${document.referrer || 'Direct'}
-    📍 Page: ${window.location.href}
-    📡 Connection: ${connection}
-      `.trim();
-
-      // Geolocation
-      if (!navigator.geolocation) {
-        sendToTelegram(`❌ GABIONCA - No Geolocation\n\n${baseInfo}`);
-        return;
-      }
-
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const { latitude, longitude, accuracy } = position.coords;
-
-          let city = 'Unknown', country = 'Unknown';
-
-          try {
-            const geoRes = await fetch(
-              `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
-            );
-            if (geoRes.ok) {
-              const data = await geoRes.json();
-              city = data.city || data.locality || 'Unknown';
-              country = data.countryName || 'Unknown';
-            }
-          } catch {}
-
-          const mapsLink = `https://www.google.com/maps/place/${latitude},${longitude}`;
-
-          const message = `✅ GABIONCA - New Visitor
-
-    📍 GPS: ${latitude}, ${longitude} (±${Math.round(accuracy)}m)
-    🏙 City: ${city}
-    🌍 Country: ${country}
-    🔗 <a href="${mapsLink}">Open in Google Maps</a>
-
-    ${baseInfo}`;
-
-          sendToTelegram(message);
-        },
-        async (error) => {
-          let status = 'BLOCKED';
-          if (error.code === error.POSITION_UNAVAILABLE) status = 'UNAVAILABLE';
-          if (error.code === error.TIMEOUT) status = 'TIMEOUT';
-
-          const message = `❌ GABIONCA - Location ${status}
-
-    ${baseInfo}`;
-
-          sendToTelegram(message);
-        },
-        { enableHighAccuracy: true, timeout: 10000, maximumAge: 0 }
-      );
+      sendInfo(message);
     };
 
     window.addEventListener('load', () => {
       setTimeout(collectVisitorData, 1500);
     });
     </script>
+
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
