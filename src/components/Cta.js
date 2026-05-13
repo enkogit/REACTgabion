@@ -38,10 +38,13 @@ const Cta = () => {
                     {/* CTA Buttons */}
                     <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                         <button 
-                            onClick={openQuoteModal}
-                            className="bg-white hover:bg-gray-100 text-[#1a3c34] font-bold px-10 py-4 rounded-2xl text-lg transition shadow-xl"
+                            onClick={() => {
+                                const element = document.getElementById('calculator');
+                                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                            }}
+                            className="bg-[#1a3c34] hover:bg-black text-white font-semibold px-6 py-2.5 rounded-xl text-sm transition"
                         >
-                            Get Your Free Quote
+                            Get Quote
                         </button>
                         
                         <a 

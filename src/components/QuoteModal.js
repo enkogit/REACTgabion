@@ -30,8 +30,8 @@ const QuoteModal = ({ isOpen, onClose, prefilledProduct = '' }) => {
 
       await emailjs.send(serviceID, templateID, {
         ...formData,
-        to_name: 'Gabionca Team',
-        from_email: 'gabionca.quotes@gmail.com',   // ← your Gmail address
+        to_name: 'Gabionca Team Canada',
+        from_email: 'ecommplex@gmail.com',   // ← your Gmail address
         reply_to: 'gabionca@pm.me'                 // ← your Proton Mail
       }, publicKey);
 

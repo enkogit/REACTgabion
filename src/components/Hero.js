@@ -35,10 +35,16 @@ const Hero = () => {
                         
                         <div className="lg:w-1/2 flex flex-col justify-center" data-aos="zoom-in" data-aos-delay="200">
                             
-                            <div className="mb-4">
+                            <div className="mb-4 flex items-center gap-2">
                                 <span className="inline-block bg-[#1a3c34] text-white text-sm font-semibold px-4 py-1 rounded-full">
-                                    Trusted Across Canada
+                                    Ships from Canada
                                 </span>
+                                
+                                <img 
+                                    src="/images/CAN.png" 
+                                    alt="Canadian Flag" 
+                                    className="h-5 w-auto rounded-sm" 
+                                />
                             </div>
 
                             <h1 className="mb-5 md:text-5xl text-3xl font-bold text-[#1a3c34] leading-tight">

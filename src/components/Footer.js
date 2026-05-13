@@ -11,7 +11,7 @@ const Footer = () => {
                     {/* Company Info */}
                     <div className="md:col-span-5">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="text-3xl">🧱</div>
+                            <div className="text-3xl"></div>
                             <h3 className="font-bold text-3xl">GABIONCA</h3>
                         </div>
                         
