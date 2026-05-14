@@ -37,7 +37,7 @@ const Hero = () => {
                             
                             <div className="mb-4 flex items-center gap-2">
                                 <span className="inline-block bg-[#1a3c34] text-white text-sm font-semibold px-4 py-1 rounded-full">
-                                    Ships from Canada
+                                    Ships across Canada
                                 </span>
                                 
                                 <img 
